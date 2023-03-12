@@ -221,4 +221,130 @@
 
 
 
-# 
+# Лекция 3:
+
+# Функции - фрагмент программы, испольщуемый многократно.
+
+# def function_name(x):
+    # body line 1
+        # ...
+    # body line n
+    # optional return
+
+# def sum_numbers(n):
+#     summa = 0
+#     for i in range(1, n+1): # первый аргумент начало, второй конец
+#         summa += i
+#     return summa # return завершит выполнение функции
+
+# a = sum_numbers(5)
+# print(a)
+
+
+
+# def sum_str(*args): # * - неограниченное количество аргументов
+#     res = ''
+#     for i in args:
+#         res += i
+#     return res
+
+# print(sum_str('q', 'e'))
+
+
+
+# Модули - файл, в котором находятся различные функции, этот файл потом можно использовать - "import"
+
+# Условно: создали файл modul1 с кодом:
+
+# def max1(a, b):
+#     if a > b:
+#         return a
+#     return b
+
+
+# import modul1 # импортирует файл modul1
+# print(modul1.max1(1, 2))
+
+# from modul1 import max1 # берет из файла modul1 функцию max1
+
+# print(max1(1, 2))
+
+# from modul1 import * # * - использует все функции из файла modul1
+
+# print(max1(1, 2))
+
+# import modul1 as m1 # Импортирует файл modul1 и берет название m1 (локально только в этом коде)
+
+# print(m1.max1(1, 2))
+
+
+
+# Рекурсия - функция, которая вызывает саму себя
+
+# def fib(n):
+#     if n in [1, 2]:
+#         return 1
+#     return fib(n-1) + fib(n-2)
+
+# lst_1 = []
+
+# for i in range(1, 10):
+#     lst_1.append(fib(i))
+# print(lst_1)
+
+
+
+# Быстрая сортировка - разбитие чего-то большого, на несколько меленьких
+
+# def quick_sort(array):
+#     if len(array) <= 1:
+#         return array
+#     else:
+#         pivot = array[0]
+#     less = [i for i in array[1:] if i <= pivot]
+#     greater = [i for i in array[1:] if i > pivot]
+#     return quick_sort(less) + [pivot] + quick_sort(greater)
+
+# print(quick_sort([1, 2, 3]))
+
+
+
+# Сортировка слиянием - список постоянно делится пополам, пока не останется по одному элементу
+
+
+# def merge_sort(nums):
+#     if len(nums) > 1:
+#         mid = len(nums) // 2
+#         left = nums[:mid]
+#         right = nums[mid:]
+#         merge_sort(left)
+#         merge_sort(right)
+#         i = j = k = 0
+
+#         while i < len(left) and j < len(right):
+#             if left[i] < right[j]:
+#                 nums[k] = left[i]
+#                 i += 1
+#             else:
+#                 nums[k] = right[j]
+#                 j += 1
+#             k += 1
+
+#         while i < len(left):
+#             nums[k] = left[i]
+#             i += 1
+#             k += 1
+
+#         while j < len(right):
+#             nums[k] = right[j]
+#             j += 1
+#             k += 1
+
+# lst1 = [1, 2, 3, 4, 5, 69, 69, 123, 456, 123456]
+# merge_sort(lst1)
+# print(lst1)
+
+
+
+# Лекция 4: 
+
