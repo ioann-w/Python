@@ -300,3 +300,123 @@
 # print(lst)
 # print(max(lst))
 
+
+
+# Семинар 5:
+
+# Задача: 
+
+# Последовательностью Фибоначчи называется последовательность чисел a0, a1, ..., an, ..., где
+# a0 = 0, a1 = 1, ak = ak-1 + ak-2 (k > 1).
+# Требуется найти N-е число Фибоначчи
+# Input: 7
+# Output: 13
+
+# Задание необходимо решать через рекурсию
+
+
+# def fibo(n):
+
+#     if n in [0, 1]:
+#         return n
+#     return fibo(n-1)+fibo(n-2)
+
+# print(fibo(int(input())))
+
+
+
+# fib = lambda N: N if N in (0, 1) else fib(N - 1) + fib(N - 2) # Анонимная функция, выполняется там же где объявляется
+# print(fib(7))
+
+
+
+# Задача: 
+
+# Хакер Василий получил доступ к классному журналу и хочет заменить все свои минимальные оценки на максимальные. 
+# Напишите программу, которая заменяет оценки Василия, но наоборот: все максимальные – на минимальные. 
+# Input: 5 -> 1 3 3 3 4 Output: 1 3 3 3 1
+
+
+# import random
+
+# n = int(input())
+
+# grades = [random.randint(1, 5)for _ in range(n)]
+
+# print(grades)
+
+# minimum, maximum = sorted(grades)[::n-1]
+
+# for i, value in enumerate(grades): # enumerate возвращает кортеж из двух элементов (индекс, элемент в списке(берется как аргумент)
+#     if value == maximum:
+#         grades[i] = minimum
+
+# print(*grades)
+
+
+
+# Задача: 
+
+# Напишите функцию, которая принимает одно число и проверяет, является ли оно простым. Напоминание: Простое число - это число, 
+# которое имеет 2 делителя: 1 и n(само число) Input: 5 Output: yes
+
+
+# n = int(input('Введите число: '))
+
+# res = True
+
+# for i in range(2, int(n ** 0.5) + 1):
+#     if n % i == 0:
+#         res = False
+
+# print(res)
+
+
+
+# Задача: 
+
+# Дано натуральное число N и последовательность из N элементов. Требуется вывести эту последовательность в обратном порядке.
+# Примечание. В программе запрещается объявлять массивы и использовать циклы (даже для ввода и вывода). Input: 2 -> 3 4 Output: 4 3
+
+# Вариант 1: 
+
+# n = int(input())
+
+# def rev(n):
+#     if n == 0:
+#         return
+#     else:
+#         x = int(input())
+#         rev(n-1)
+#         print(x, end = ' ')
+
+# rev(n)
+
+# Вариант 2: 
+
+# def foo(n):
+#     if n == 1:
+#         return input()
+#     n -= 1
+#     temp = foo(n)
+#     return input() + ' ' + temp
+
+# print(foo(int(input())))
+
+# Вариант 3: 
+
+# from random import randrange
+
+# def func(n):
+#     if n == 0:
+#         return '->'
+    
+#     print(var := randrange(n), end = ' ')
+#     return f'{func(n-1)} {var}'
+
+# print(func(5))
+
+
+
+# Семинар 6:
+
