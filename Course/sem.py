@@ -173,3 +173,130 @@
 
 # Семинар 4
 
+
+# Задача:
+
+# Напишите программу, которая принимает на вход строку, и отслеживает, сколько раз каждый символ уже встречался. 
+# Количество повторов добавляется к символам с помощью постфикса формата _n.
+
+# Input: a a a b c a a d c d d
+# Output: a a_1 a_2 b c a_3 a_4 d c_1 d_1 d_2
+
+# Для решения данной задачи используйте функцию .split()
+
+
+# Вариант 1:
+
+# a = input('Введите слово: ').split()
+# b = []
+
+# for i in range(len(a)):
+#     if a[i] in b:
+#         b.append(a[i] + '_' + str(a[:i].count(a[i])))
+#     else:
+#         b.append(a[i])
+
+# print(*b)
+
+
+# Вариант 2:
+
+# st = 'a a a b c a a d c d d'
+# lt = st.split()
+
+# dct = {}
+# output = ''
+
+# for i in lt:
+#     if i in dct:
+#         dct[i] += 1
+#         output += f'{i}_{dct[i]} '
+#     else:
+#         dct[i] = 0
+#         output += f'{i} '
+
+# print(f"Наш словарь: {dct}")
+# print(f'Решение: {output}')
+
+
+
+# Задача: 
+
+# Пользователь вводит текст(строка). Словом считается последовательность непробельных символов идущих подряд, 
+# слова разделены одним или большим числом пробелов. Определите, сколько различных слов содержится в этом тексте.
+# Input: She sells sea shells on the sea shore The shells that she sells are sea shells 
+# I'm sure So if she sells sea shells on the sea shore I'm sure that the shells are sea shore shells
+
+# Output: 13
+
+
+# Вариант 1: 
+
+# other_text = 'Other text'
+# other_text = set(other_text.upper().split())
+
+# print(other_text)
+# print(len(other_text))
+
+
+# Вариант 2: 
+
+# inpt1 = "She sells sea shells on the sea shore The shells that she sells are sea shells I'm sure so if she, sells sea shells on the sea shore I'm sure that the shells are sea shore shells"
+# inpt2 = ''
+
+# for char in inpt1:
+#     if char == ' ' or char.isalpha():
+#         inpt2 += char
+
+# dct = {}
+
+# for word in inpt2.upper().split():
+#     dct[word] = ''
+
+# print(len(dct))
+
+
+# Задача:
+
+# Ваня и Петя поспорили, кто быстрее решит следующую задачу: 
+# “Задана последовательность неотрицательных целых чисел. Требуется определить значение наибольшего элемента последовательности, 
+# которая завершается первым встретившимся нулем (число 0 не входит в последовательность)”. Однако 2 друга оказались не такими смышлеными. 
+# Никто из ребят не смог до конца сделать это задание. Они решили так: у кого будет меньше ошибок в коде, тот и выиграл спор. 
+# За помощью товарищи обратились к Вам, студентам.
+
+
+# Вариант 1: 
+
+# import random
+# n= 20
+
+# a = [random.randint(1, 10) for _ in range(n)]
+# print(a)
+# b = []
+
+# idx = random.randrange(len(a))
+
+# a.insert(idx, 0)
+
+# for i in range(len(a)):
+#     if a[i] != 0:
+#         b.append(a[i])
+#     else:
+#         break
+
+# print(b)
+# print(max(b))
+
+
+# Вариант 2: 
+
+# import random
+# lst = []
+
+# while (i := random.randrange(11) != 0)
+#     lst.append(i)
+# lst.append(i)
+
+# print(lst)
+# print(max(lst))
+
