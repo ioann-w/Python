@@ -348,3 +348,86 @@
 
 # Лекция 4: 
 
+# Лекция 4: 
+
+# Функции: 
+
+# def calk1(a):
+#     return a+a
+
+# def calk2(a):
+#     return a*a
+
+# def math(op, x):
+#     print(op(x))
+
+# math(calk1, 5)
+# math(calk2, 5)
+
+
+
+# def math(op, x, y):
+#     print(op(x, y))
+
+# calk1 = lambda a, b: a + b
+
+# math(calk1, 5, 45)
+
+# math(lambda a, b: a + b, 5, 45)
+
+
+
+# lst1 = [1, 2, 3, 5, 8, 15, 23, 38]
+# res = list()
+
+# print(lst1)
+
+# for i in lst1:
+#     if i % 2 == 0:
+#         res.append((i, i**2))
+
+# print(res)
+
+
+# def select(f, col):
+#     return [f(x) for x in col]
+
+# def where(f, col):
+#     return [x for x in col if f(x)]
+
+# lst1 = [1, 2, 3, 5, 8, 15, 23, 38]
+# res = select(int, lst1)
+# print(res)
+# res = where(lambda x: x % 2 == 0, res)
+# print(res)
+# res = list(select(lambda x: (x, x**2), res))
+# print(res)
+
+
+
+# lst1 = [x for x in range(1, 20)]
+# print(lst1)
+
+# lst1 = list(map(lambda x: x + 10, lst1))
+# print(lst1)
+
+
+# lst1 = "1 2 3 4 5 6 7 8 9 00"
+# lst1 = list(map(int, lst1.split())) # map итератор, split преобразует в список, с помощью map мы наш список строк преоброзовали в int
+# print(lst1)
+
+
+# lst1 = [15, 2, 3, 445, 5, 66, 7, 8, 95, 00]
+# res = list(filter(lambda x: x % 10 == 5, lst1))
+# print(res)
+
+
+
+# # Функция zip() пробегает по минимальному входящему набору:
+
+# users = ['u1', 'u2', 'u3', 'u4', 'u5']
+# id = [1, 2, 3, 4]
+# salary = [111, 222, 333]
+
+# data = list(zip(users, id, salary))
+# print(data) # [('u1', 1, 111), ('u2', 2, 222), ('u3', 3, 333)]
