@@ -432,3 +432,9 @@
 
 
 
+# Лекция 5: 
+
+# Google Colab. Знакомство с аналитикой.
+
+# https://colab.research.google.com/drive/17ZB--MbQ8VuOE2ZmX5BctWq0STvMTe8w#scrollTo=SM59vC0JwSFV
+
