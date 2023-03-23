@@ -1,0 +1,1 @@
+# Задачи решены в google colab - https://colab.research.google.com/drive/1LViTR92uuMfGK_rFB8vFECaQ_4vKtrKi#scrollTo=KCyb3-oNAMC3
